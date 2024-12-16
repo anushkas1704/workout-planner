@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Workout - FitTrack</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Same navigation as index.html -->
+    </nav>
+
+    <main class="container">
+        <h1>Track Your Workout</h1>
+        
+        <div class="workout-form-container">
+            <form id="workoutForm" class="workout-form">
+                <div class="form-group">
+                    <label for="exercise">Exercise Name</label>
+                    <input type="text" id="exercise" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="sets">Sets</label>
+                        <input type="number" id="sets" min="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reps">Reps</label>
+                        <input type="number" id="reps" min="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" min="0" step="0.5">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Save Workout</button>
+            </form>
+        </div>
+
+        <div class="workout-list-container">
+            <h2>Today's Workouts</h2>
+            <div id="workoutList" class="workout-list">
+                <!-- Workouts will be displayed here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

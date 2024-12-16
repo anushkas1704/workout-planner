@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Workout Plan - FitTrack</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Updated navigation without log page -->
+    </nav>
+
+    <main class="container">
+        <h1>Create Workout Plan</h1>
+        
+        <div class="plan-form-container">
+            <form id="planForm" class="plan-form">
+                <div class="form-group">
+                    <label for="planName">Plan Name</label>
+                    <input type="text" id="planName" required>
+                </div>
+
+                <div id="exerciseList">
+                    <div class="exercise-item">
+                        <div class="form-group">
+                            <label>Exercise Name</label>
+                            <input type="text" class="exercise-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Sets</label>
+                            <input type="number" class="exercise-sets" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Reps</label>
+                            <input type="number" class="exercise-reps" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" id="addExercise" class="btn btn-secondary">Add Exercise</button>
+                <button type="submit" class="btn btn-primary">Save Plan</button>
+            </form>
+        </div>
+
+        <div class="plans-container">
+            <h2>My Plans</h2>
+            <div id="plansList" class="plans-grid">
+                <!-- Saved plans will appear here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
