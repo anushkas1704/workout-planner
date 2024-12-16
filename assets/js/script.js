@@ -1,6 +1,5 @@
-// DOM Elements
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Navigation
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     
@@ -10,33 +9,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Workout Form
     const workoutForm = document.getElementById('workoutForm');
     if (workoutForm) {
         workoutForm.addEventListener('submit', handleWorkoutSubmit);
         loadWorkouts();
     }
 
-    // Check if hero section exists
     const hero = document.querySelector('.hero');
     if (hero) {
-        // Create a new image object
         const img = new Image();
         img.src = 'assets/images/hero-bg.jpg';
         
-        // When image loads, add loaded class
         img.onload = function() {
             hero.classList.add('loaded');
         };
     }
 
-    // Plan Form
     const planForm = document.getElementById('planForm');
     const addExerciseBtn = document.getElementById('addExercise');
 
     if (planForm) {
         planForm.addEventListener('submit', handlePlanSubmit);
-        loadPlans(); // Load existing plans
+        loadPlans(); 
     }
 
     if (addExerciseBtn) {
@@ -44,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Workout Functions
+
 function handleWorkoutSubmit(e) {
     e.preventDefault();
     
@@ -107,7 +101,7 @@ function deleteWorkout(id) {
     loadWorkouts();
 }
 
-// Plan Functions
+
 function handlePlanSubmit(e) {
     e.preventDefault();
     

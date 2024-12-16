@@ -61,14 +61,13 @@ body {
     color: var(--primary);
 }
 
-/* Hero Section with Background Image */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(28, 46, 74, 0.33), rgba(28, 46, 74, 0.31)),
+    background: linear-gradient(rgba(28, 54, 95, 0.46), rgba(85, 107, 143, 0.44)),
                 url('../images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
