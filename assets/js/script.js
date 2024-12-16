@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -36,6 +35,28 @@ document.addEventListener('DOMContentLoaded', function() {
     if (addExerciseBtn) {
         addExerciseBtn.addEventListener('click', addExerciseField);
     }
+
+    const darkModeToggle = document.getElementById('darkMode');
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        if (savedTheme === 'dark') {
+            darkModeToggle.checked = true;
+        }
+    }
+    
+    // Toggle theme
+    darkModeToggle.addEventListener('change', function() {
+        if (this.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        }
+    });
 });
 
 

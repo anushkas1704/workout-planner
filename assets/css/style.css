@@ -244,3 +244,106 @@ body {
 .icon i {
     color: var(--primary);
 }
+
+/* Dark Mode Styles */
+:root {
+    /* Light Theme Variables */
+    --primary: #1c2e4a;
+    --primary-light: #2c4366;
+    --background: #f8f9fa;
+    --text: #2d3436;
+    --card-bg: white;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --primary: #8db0c1;
+    --primary-light: #2980b9;
+    --background: #1a1a1a;
+    --text: #ffffff;
+    --card-bg: #2d3436;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Theme Toggle Styles */
+.theme-toggle {
+    position: relative;
+    margin-left: 20px;
+}
+
+.dark-mode-input {
+    opacity: 0;
+    position: absolute;
+}
+
+.dark-mode-label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.2);
+}
+
+.dark-mode-label i {
+    color: #f1c40f;
+    font-size: 14px;
+}
+
+.dark-mode-label::after {
+    background-color: #fff;
+    border-radius: 50%;
+    content: '';
+    height: 18px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+    transition: transform 0.2s linear;
+    width: 18px;
+}
+
+.dark-mode-input:checked + .dark-mode-label::after {
+    transform: translateX(24px);
+}
+
+/* Update existing elements for dark mode */
+body {
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar {
+    background: var(--card-bg);
+    transition: background-color 0.3s;
+}
+
+.feature-card, 
+.workout-card,
+.plan-card,
+.workout-form,
+.plan-form {
+    background: var(--card-bg);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Form inputs dark mode */
+.form-group input,
+.form-group textarea {
+    background: var(--card-bg);
+    color: var(--text);
+    border-color: var(--primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    border-color: var(--primary-light);
+}
